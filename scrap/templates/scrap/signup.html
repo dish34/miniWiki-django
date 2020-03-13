@@ -1,0 +1,9 @@
+{% extends 'scrap/base.html' %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_table}}
+    <input type="submit" value="SUBMIT">
+</form>
+{% endblock content %}

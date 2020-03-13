@@ -1,0 +1,45 @@
+{% extends 'scrap/base.html' %}
+
+{% block content %}
+
+
+{% if user.username %}
+<a href="{% url 'logout' %}">Logout</a>
+{{ user.username }}
+{% else %}
+<a href="{% url 'index' %}">Login</a>
+{% endif %}
+
+
+<div class="row">
+    <div class="col-sm-5 mx-auto">
+        <div class="container">
+            <p>
+                <h2>Enter Your Title</h2>
+            </p>
+            <form action="" method="get" name="gettitle">
+                <input type="text" name="your_title">
+                <input type="submit" value="ok">
+            </form>
+            <div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <h1>{{title}}</h1>
+
+    <div>
+        <img src="{{img}}" alt="">
+    </div>
+    <div>
+        {{des}}
+
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
